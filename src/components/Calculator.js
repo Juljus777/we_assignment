@@ -40,6 +40,7 @@ const Calculator = () => {
     if(inputData.days <= 8 + maxDays){
       return inputData.days - 8
     }
+    return maxDays;
   }
 
   const calcDailyAllowance = () => {
@@ -103,7 +104,10 @@ const Calculator = () => {
                 <div className='inputFieldWrapper'>
                   <label className='checkboxWrapper'>
                     <input className='checkbox' type='checkbox' id='tubercolosis' name='hasTubercolosis'  value={inputData.hasTubercolosis} onChange={handleChange}/>
-                    <span className='fakebox'></span>
+                    <span className='fakebox'>
+                      <span className='fakeboxBackground'>
+                      </span>  
+                    </span>
                     <span>I have tubercolosis</span>
                   </label>
                 </div>
