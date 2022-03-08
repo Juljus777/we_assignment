@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const Calculator = () => {
 
-  const [inputData, setInputData] = useState({income: 640, days: 0, hasTubercolosis: false});
+  const [inputData, setInputData] = useState({income: 0, days: 0, hasTubercolosis: false});
 
   const [calcData, setCalcData] = useState(
     {
@@ -53,21 +53,20 @@ const Calculator = () => {
   const calcEmployerCompensationAmount = () => {
     const employerCompensationDays = calcEmployerCompensationDays();
     const dailyCompensatedIncome = calcDailyAllowance();
-    return (dailyCompensatedIncome*employerCompensationDays);
+    return dailyCompensatedIncome*employerCompensationDays;
   }
   const calcInsuranceCompensationAmount = () => {
     const insuranceCompensationDays = calcInsuranceCompensationDays();
     const dailyCompensatedIncome = calcDailyAllowance();
-    return (dailyCompensatedIncome*insuranceCompensationDays);
+    return dailyCompensatedIncome*insuranceCompensationDays;
   }
   const calcTotal = () => {
     return calcInsuranceCompensationAmount() + calcEmployerCompensationAmount();
   }
 
   const handleCalculation = () => {
-    setCalcData(oldData => (
+    setCalcData(
       {
-        ...oldData, 
         employerCompensationDays: calcEmployerCompensationDays(),
         employerCompensationAmount: calcEmployerCompensationAmount().toFixed(2),
         employerDailyAllowance: calcDailyAllowance().toFixed(2),
@@ -76,7 +75,7 @@ const Calculator = () => {
         insuranceCompensationAmount: calcInsuranceCompensationAmount().toFixed(2),
         total: calcTotal().toFixed(2)
       }
-      ))
+    )
   }
 
   return (
@@ -132,9 +131,11 @@ const Calculator = () => {
                       </div>
                     </div>
                   <hr />
-                  <p className='infoText totalText'>Compensation total for {inputData.days} days (net)</p>
-                  <br />
-                  <p className='totalTextBig'>{calcData.total}€</p>
+                  <div className='totalTextWrapper'>
+                    <p className='infoText totalText'>Compensation total for {inputData.days} days (net)</p>
+                    <br />
+                    <p className='totalTextBig'>{calcData.total}€</p>
+                  </div>
               </div>
             </div>
             <div className="bottomBorder"></div>

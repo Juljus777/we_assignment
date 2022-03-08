@@ -286,7 +286,9 @@ li{
         'area1 area2'
         'area3 area4'
     ;
+    word-break: break-all;
 }
+
 .item1{ grid-area: area1; }
 .item2{ grid-area: area2; }
 .item3{ grid-area: area3; }
@@ -314,6 +316,10 @@ hr{
     line-height:15px;
     color:var(--color-metal-middle);
     margin:0;
+}
+.totalTextWrapper{
+    padding:0 20px;
+    word-break: break-all;
 }
 .totalText{
     text-align:center;
@@ -488,6 +494,9 @@ hr{
         font-size:16px;
         line-height:21px;
     }
+    .totalTextWrapper{
+        padding:0 30px;
+    }
     .upperBorder{
         border-bottom: 25px solid white;
         border-left: 25px solid transparent;
@@ -622,6 +631,9 @@ hr{
     .infoTextGray{
         font-size:26px;
         line-height:31px;
+    }
+    .totalTextWrapper{
+        padding:0 40px;
     }
     .upperBorder{
         border-bottom: 40px solid white;
