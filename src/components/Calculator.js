@@ -22,8 +22,6 @@ const Calculator = () => {
       {...oldData, [name]:type === "checkbox" ? checked : value}
     ))
   }
-  console.log("rendered");
-
   const calcEmployerCompensationDays = () => {
     const maxEmployerCompensationDays = 5;
     //starts paying from 3rd day onwards
@@ -130,7 +128,7 @@ const Calculator = () => {
                       </div>
                       <div className='item4'>
                         <p className='infoTextBig'>{calcData.insuranceCompensationAmount}€</p>
-                        <p className='infoTextGray'>Daily allowance <br /> 28,00€</p>   
+                        <p className='infoTextGray'>Daily allowance <br /> {calcData.employerDailyAllowance}€</p>   
                       </div>
                     </div>
                   <hr />

@@ -293,9 +293,10 @@ li{
 .item4{ grid-area: area4; }
 hr{
     margin:0;
-    border-top: 1px solid var(--color-metal-light);
+    border-top: 1px solid;
     max-width:100%;
     border-radius: 0px 0px 12px 2px;
+    border-color: var(--color-metal-light);
 }
 .infoText{
     margin:0;
@@ -324,13 +325,6 @@ hr{
     font-weight: 700;
     text-align: center;
     margin:0;
-}
-
-@media (min-width: 380px) {
-
-}
-@media (min-width: 480px) {
-    
 }
 @media (min-width: 768px) {
     .calculatorWrapper{
@@ -377,6 +371,266 @@ hr{
     }
 
 }
-@media (min-width: 1400px) {
-
+@media (min-width: 2560px){
+    .app{
+        gap:150px;
+    }
+    h1{
+        font-size:52px;
+        line-height:61px;
+        margin:40px 0;
+    }
+    p{
+        font-size:34px;
+        line-height:46px;
+    }
+    h2{
+        font-size:48px;
+        line-height:51px;
+        margin-bottom:40px;
+    }
+    li{
+        font-size:34px;
+        line-height:46px;
+    }
+    .listItem{
+        padding: 10px 0 10px 10px;
+    }
+    .bullet{
+        width:24px;
+        height:6px;
+        margin:18px 18px 0 0;
+    }
+    .bullet2{
+        width:20px;
+        height:6px;
+        margin: 18px 18px 0 0;
+    }
+    .splitSection{
+        padding-top:40px;
+    }
+    .calculator{
+        padding:30px;
+    }
+    .calculatorWrapper{
+        max-width:500px;
+    }
+    .calculatorContent{
+        padding:100px 0;
+    }
+    .calcTitle{
+        font-size:40px;
+        line-height:41px;
+    }
+    label{
+        font-size:24px;
+        line-height:28px;
+    }
+    .inputFieldWrapper{
+        margin-top:30px;
+    }
+    .inputFieldContainer{
+        font-size:22px;
+        line-height:34px;
+        height:70px;
+        border:3px solid transparent;
+    }
+    .inputField{
+        font-size:20px;
+    }
+    .inputType{
+        font-size:24px;
+        line-height:34px;
+    }
+    .fakebox{
+        width:30px;
+        height:30px;
+        border:3px solid transparent;
+    }
+    .checkbox:checked + .fakebox::before {
+        content: '';
+        width: 8px;
+        height: 15px;
+        border-width: 0 4px 4px 0;
+        position: absolute;
+        top: 40%;
+        left: 70%;
+        transform: translate(-70%, -50%) rotate(45deg);
+    }
+    .inputButton{
+        width:220px;
+        margin-top:30px;
+    }
+    .buttonText{
+        font-size:24px;
+        line-height:26px;
+    }
+    .dataContainer{
+        padding:30px;
+        gap:30px;
+    }
+    .infoText{
+        font-size:20px;
+        line-height:24px;
+    }
+    .totalText{
+        margin-top:30px;
+    }
+    .infoTextBig{
+        font-size:24px;
+        line-height:26px;
+    }
+    .totalTextBig{
+        font-size:30px;
+        line-height:36px;
+    }
+    .infoTextGray{
+        font-size:16px;
+        line-height:21px;
+    }
+    .upperBorder{
+        border-bottom: 25px solid white;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+    }
+    .bottomBorder{
+        border-top: 25px solid white;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+    }
+}
+@media (min-width: 3840px){
+    .app{
+        gap:250px;
+    }
+    h1{
+        font-size:72px;
+        line-height:71px;
+        margin:60px 0;
+    }
+    p{
+        font-size:44px;
+        line-height:56px;
+    }
+    h2{
+        font-size:58px;
+        line-height:61px;
+        margin-bottom:60px;
+    }
+    li{
+        font-size:44px;
+        line-height:56px;
+    }
+    .pl1{
+        padding-left:30px;
+    }
+    .listItem{
+        padding: 15px 0 15px 15px;
+    }
+    .bullet{
+        width:45px;
+        height:10px;
+        margin:22px 30px 0 0;
+    }
+    .bullet2{
+        width:30px;
+        height:10px;
+        margin: 22px 40px 0 0;
+    }
+    .splitSection{
+        padding-top:60px;
+    }
+    .calculator{
+        padding:40px;
+    }
+    .calculatorWrapper{
+        max-width:650px;
+    }
+    .calculatorContent{
+        padding:120px 0;
+    }
+    .calcTitle{
+        font-size:50px;
+        line-height:51px;
+    }
+    label{
+        font-size:30px;
+        line-height:34px;
+    }
+    .inputFieldWrapper{
+        margin-top:40px;
+    }
+    .inputFieldContainer{
+        font-size:32px;
+        line-height:44px;
+        height:80px;
+        border:4px solid transparent;
+    }
+    .inputField{
+        font-size:30px;
+    }
+    .inputType{
+        font-size:34px;
+        line-height:44px;
+    }
+    .fakebox{
+        width:40px;
+        height:40px;
+        border:4px solid transparent;
+    }
+    .checkboxWrapper{
+        gap:20px;
+    }
+    .checkbox:checked + .fakebox::before {
+        content: '';
+        width: 12px;
+        height: 19px;
+        border-width: 0 4px 4px 0;
+        position: absolute;
+        top: 40%;
+        left: 70%;
+        transform: translate(-70%, -50%) rotate(45deg);
+    }
+    .inputButton{
+        width:320px;
+        margin-top:40px;
+        border-radius:50px;
+    }
+    .buttonText{
+        font-size:34px;
+        line-height:36px;
+    }
+    .dataContainer{
+        padding:40px;
+        gap:40px;
+    }
+    .infoText{
+        font-size:30px;
+        line-height:34px;
+    }
+    .totalText{
+        margin-top:40px;
+    }
+    .infoTextBig{
+        font-size:34px;
+        line-height:36px;
+    }
+    .totalTextBig{
+        font-size:40px;
+        line-height:46px;
+    }
+    .infoTextGray{
+        font-size:26px;
+        line-height:31px;
+    }
+    .upperBorder{
+        border-bottom: 40px solid white;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+    }
+    .bottomBorder{
+        border-top: 40px solid white;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+    }
 }
